@@ -1,26 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Drawing</title>
-<meta author = "ilaria bossi" content = "draw function, fill, rect">
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/main.css">
+  <title>Draw with JavaScript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-<div class="row">
-	<div class = 'col-sm-4'></div>
-	<div class = 'col-sm-4'>
-		<canvas id="myCanvas" width="600" height="500"></canvas>
-		<h1 id="title">Draw a simple face using lines and circles</h1>
-	</div>
-	<div class = 'col-sm4'></div>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Simple Drawings With JavaScript</h1> 
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Draw a simple face with lines and circles</h3>
+      <canvas id="canvas1" width="350" height="300">
+    </div>
+    <div class="col-sm-4">
+      <h3>Draw a red car with black wheels</h3> 
+      <canvas id="canvas2" width="350" height="300">
+    </div>
+    <div class="col-sm-4">
+      <h3>Draw the grass, and the sun in the sky</h3>
+      <canvas id="canvas3" width="350" height="300">
+    </div>
+  </div>
 </div>
-
-<script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-	
 </html>
