@@ -1,13 +1,13 @@
-body {
-	background-color: pink;
-}
 
-canvas {
-	border: solid blue 2px;
-	text-align: center;
+#canvas1 {
+	border: solid purple 2px;
 }
-#title {
-	margin-left: 40px;
-	font-size: 24px;
-	text-align: center;
+#canvas2 {
+	border: solid purple 2px;
+}
+#canvas3 {
+	border: solid purple 2px;
+}
+h3 {
+	font-size: 18px;
 }
