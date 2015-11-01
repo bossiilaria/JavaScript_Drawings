@@ -1,52 +1,95 @@
 
-
-var c =  document.getElementById("myCanvas");
+var c = document.getElementById("canvas1");
 var context = c.getContext("2d");
 
-//Play with rectangles
-context.fillStyle="yellow";
-context.fillRect(0, 0, 300, 90);
+// Create gradient
+var grd = context.createLinearGradient(0,0,100,0);
+grd.addColorStop(0,"yellow");
+grd.addColorStop(1,"white");
+// Fill with gradient
+context.fillStyle = grd;
+context.fillRect(0,0,300,50);
+
 
 context.fillStyle="blue";
-context.fillRect(300, 0, 300, 90);
+context.fillRect(170, 0, 300, 50);
 
 context.fillStyle="blue";
-context.fillRect(0, 430, 300, 90);
+context.fillRect(0, 330, 300, 90);
 
 context.fillStyle="yellow";
-context.fillRect(300, 430, 300, 90);
+context.fillRect(300, 330, 300, 90);
 
 //Draw the face
 context.beginPath();
-context.arc(270, 255, 160, 0, 2*Math.PI);
+context.arc(170, 170, 120, 0, 2*Math.PI);
 context.stroke();
 
 //Dra left eye
 context.beginPath();
-context.arc(200, 205, 20, 0, 2*Math.PI);
+context.arc(120, 105, 20, 0, 2*Math.PI);
 context.stroke();
 
 //Draw right eye
 context.beginPath();
-context.arc(350, 205, 20, 0, 2*Math.PI);
+context.arc(220, 105, 20, 0, 2*Math.PI);
 context.stroke();
 
 //Draw the mouth
 context.beginPath();
-context.arc(270, 360, 30, 0, 2*Math.PI);
+context.arc(170, 250, 10, 0, 2*Math.PI);
 context.stroke();
 
 //Draw the nose
-context.moveTo(250, 225);
-context.lineTo(300, 300);
+context.moveTo(170, 120);
+context.lineTo(185, 170);
 context.stroke();
 
-context.moveTo(300, 300);
-context.lineTo(280, 320);
+context.moveTo(185, 168);
+context.lineTo(168, 185);
 context.stroke();
-/*
-context.beginPath();
-context.arc(355, 210, 30, 2*Math.PI);
-context.stroke();
-*/
+
+var x=15; //Car position
+var draw = function() {
+
+//Draw the car
+
+var canvas2 = document.getElementById("canvas2");
+var context2 = canvas2.getContext("2d");
+
+
+	//build the body
+	context2.fillStyle="red";
+	context2.fillRect(x+40, 40, 120, 50);
+	context2.fillRect(x, 70, 200, 70);
+
+	//build the wheels
+	context2.fillStyle="black";
+	context2.beginPath();
+	context2.arc(x+40, 140, 20, 30, 50);
+	context2.arc(x+170, 140, 20, 30, 50);
+	context2.fill();
+};
+draw();
+
+//Draw the grass and sun in the sky
+
+var canvas3 = document.getElementById("canvas3");
+var context3 = canvas3.getContext("2d");
+
+//Draw the sky
+context3.fillStyle = "#00C4FF";
+context3.fillRect(0, 0, 400, 150);
+
+//Draw the grass
+context3.fillStyle="#00FA00";
+context3.fillRect(0, 150, 400, 150);
+
+//Draw the sun
+context3.fillStyle="yellow";
+context3.beginPath();
+context3.arc(200, 40, 30, 0, 2*Math.PI);
+context3.stroke();
+context3.fill();
+
 
